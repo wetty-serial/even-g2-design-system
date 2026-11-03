@@ -4,6 +4,10 @@ Even G2 のグラス画面（576×288、緑単色）に出す UI を、決まっ
 
 公式のガイドラインではありません。また、ここにあるコードは実機での動作を確かめた完成アプリではなく、作者のアプリで共通に使っている部品とその標準値を参考として公開するものです。検証した範囲は [docs/verification.md](docs/verification.md) にまとめています。
 
+![一覧と詳細の画面例](assets/reference/reader-flow.png)
+
+部品集を使うアプリ側の画面を、架空データで公式シミュレーターに表示した例です。実機の写真ではなく、`npm run example` の出力を描画したものでもありません。一覧の 2 行目の字下げは撮影用に加えたものです。ほかの画像と注記は [docs/screenshots.md](docs/screenshots.md) にあります。
+
 ## できること
 
 - 標準値（`GLASS`）に沿って、上段・本文枠・一覧・確認の text container を組み立てる
@@ -53,6 +57,7 @@ const containers = padToFixedSet([...bar.containers, ...list.faces])
 | `src/i18n` | 言語の型 `Lang` と文言テーブルの引き方 |
 | `examples/run.ts` | 一覧と本文のコンテナ定義を出力する例 |
 | `docs/` | 設計の説明 |
+| `assets/reference/` | 参考画像 4 点 |
 
 `text` / `events` / `storage` / `i18n` は `ui` の依存先として一緒に切り出したものです。
 
@@ -65,8 +70,9 @@ const containers = padToFixedSet([...bar.containers, ...list.faces])
 | [docs/interaction.md](docs/interaction.md) | 操作と状態の見せ方 |
 | [docs/components.md](docs/components.md) | 部品の API |
 | [docs/verification.md](docs/verification.md) | 検証した範囲と未検証の点 |
+| [docs/screenshots.md](docs/screenshots.md) | 参考画像の用途・操作・出自と注記 |
 | [docs/roadmap.md](docs/roadmap.md) | 今後の整備 |
 
 ## ライセンス
 
-未定です。決まるまでは、コードの再利用・再配布の許諾はしていません。
+未定です。決まるまでは、コードと画像の再利用・再配布の許諾はしていません。
